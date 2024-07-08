@@ -21,7 +21,7 @@ test('login fails with other credentials and an error message is shown', async (
   await expect(loginPage.validationError).toBeVisible();
   await expect(loginPage.validationError).toHaveText('Either the user does not exist or the password is incorrect');
 });
-test.only('able to login with the right credentials', async ({ page, loginPage  }) => {
+test('able to login with the right credentials', async ({ page, loginPage  }) => {
   await page.goto('https://platform-staging.reffie.me/');
   // Expect a title "to contain" a substring.
   await expect(page).toHaveTitle(/Reffie | Login/);
