@@ -1,3 +1,3 @@
 # To run the test in ...testQA %
 
-pnpm run test --debug
+pnpm run test --headed

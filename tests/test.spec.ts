@@ -14,14 +14,14 @@ test('login fails with other credentials and an error message is shown', async (
       const input = element as HTMLInputElement
       return input.validationMessage
     })
-    expect(validationMessage).toContain("Please fill in this field")
+    expect(validationMessage).toContain("Fill out this field")
   // Login with incorrect credencials
   await loginPage.doLogIn("qa_interview@reffie.me", "QaEngineerInter2024-06-20")
   //Expects schema validation error message is shown
   await expect(loginPage.validationError).toBeVisible();
   await expect(loginPage.validationError).toHaveText('Either the user does not exist or the password is incorrect');
 });
-test.only('able to login with the right credentials', async ({ page, loginPage  }) => {
+test('able to login with the right credentials', async ({ page, loginPage  }) => {
   await page.goto('https://platform-staging.reffie.me/');
   // Expect a title "to contain" a substring.
   await expect(page).toHaveTitle(/Reffie | Login/);
@@ -34,7 +34,7 @@ test.only('able to login with the right credentials', async ({ page, loginPage  
       const input = element as HTMLInputElement
       return input.validationMessage
     })
-    expect(validationMessage).toContain("Please fill in this field")
+    expect(validationMessage).toContain("Fill out this field")
   // Login with incorrect credencials
   await loginPage.doLogIn("qa_engineer_interview@reffie.me", "QaEngineerInterview2024-06-20")
   //Expects you should be able to navigate to the conversations page. 
