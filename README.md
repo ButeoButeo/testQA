@@ -1,4 +1,4 @@
-# To run the test in ...testQA %
+# To run the tests:
 
 pnpm run test --headed
 pnpm run test 
