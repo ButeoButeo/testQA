@@ -11,7 +11,7 @@
   "author": "Tania P",
   "license": "ISC",
   "devDependencies": {
-    "@playwright/test": "^1.45.1",
+    "@playwright/test": "^1.55.1",
     "@types/node": "^20.14.10"
   }
 }
